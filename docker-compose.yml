@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  reverse-proxy:
+    image: jwilder/nginx-proxy
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - dev-network
+  helloworld:
+    build: ./services/helloworld/.
+    restart: always
+    environment:
+      VIRTUAL_HOST: helloworld.docker
+    volumes:
+      - ./services/helloworld/src:/var/www/html/helloworld/public
+    networks:
+      - dev-network
+  mysql:
+    image: mysql:5.7
+    restart: always
+    env_file:
+      - ./services/mysql/.env
+    environment:
+      TZ: Europe/London
+      VIRTUAL_HOST: mysql.docker
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+    ports:
+      - 3306:3306
+    volumes:
+      - ./services/mysql/dumps:/docker-entrypoint-initdb.d
+    networks:
+      - dev-network
+  adminer:
+    build: ./services/adminer/.
+    restart: always
+    environment:
+      VIRTUAL_HOST: adminer.docker
+      ADMINER_DEFAULT_SERVER: mysql
+      ADMINER_DESIGN: konya
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
+    external: true
