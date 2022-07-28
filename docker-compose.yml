@@ -23,8 +23,6 @@ services:
   mysql:
     image: mysql:5.7
     restart: always
-    env_file:
-      - ./services/mysql/.env
     environment:
       TZ: Europe/London
       VIRTUAL_HOST: mysql.docker
