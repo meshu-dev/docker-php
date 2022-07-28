@@ -55,6 +55,26 @@ vim /etc/hosts
 127.0.0.1   adminer.docker
 ```
 
+*** Windows version ***
+
+If you are using Windows OS do the following...
+
+Press the Start menu, search for "notepad" and select the "Run as administrator".
+
+Once notepad has opened select File -> Open, add in the following directory and then press enter to show the hosts file.
+
+```
+C:\Windows\system32\drivers\etc\
+```
+
+Select hosts to open, add in the below lines, save and finally close notepad.
+
+```
+127.0.0.1   helloworld.docker
+127.0.0.1   mysql.docker
+127.0.0.1   adminer.docker
+```
+
 5. Create and run containers with the following command...
 
 ```
