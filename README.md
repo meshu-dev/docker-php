@@ -23,8 +23,8 @@ Add the following shorthand for the docker-compose command...
 
 2. Clone repository and then change directory to inside of the repository
 
-        git clone git@github.com:meshu-dev/docker-php.git
-
+        git clone git@github.com:meshu-dev/docker-php.git\
+####
         cd docker-php
 
 3. Create docker network by running the following command...
