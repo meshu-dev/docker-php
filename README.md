@@ -4,6 +4,8 @@ This setup allows you to use docker and docker-compose easily for your developme
 
 ## Prerequisites
 
+Install [Gitbash](https://gitforwindows.org/) if using Windows
+
 Go to user directory and open the .bashrc file
 
     vim ~/.bashrc
@@ -34,6 +36,8 @@ Add the following shorthand for the docker-compose command...
         sudo vim /etc/hosts
 
         127.0.0.1   helloworld.docker
+        127.0.0.1   mysql.docker
+        127.0.0.1   adminer.docker
 
 5. Create and run containers with the following command...
 
