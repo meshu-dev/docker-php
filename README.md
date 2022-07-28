@@ -6,7 +6,7 @@ This setup allows you to use docker and docker-compose easily for your developme
 
 Go to user directory and open the .bashrc file
 
-    ```vim ~/.bashrc```
+    vim ~/.bashrc
     
 Add the following shorthand for the docker-compose command...
 
