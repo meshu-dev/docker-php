@@ -10,50 +10,40 @@ Go to user directory and open the .bashrc file
     
 Add the following shorthand for the docker-compose command...
 
-    ```
     # Docker
     alias dc='docker-compose'
-    ```
 
 ## Setup
 
 1. Open up terminal application and change to a directory where you want your docker dev setup, an example would be...
 
-    ```cd ~/```
+    cd ~/
 
 2. Clone repository and then change directory to inside of the repository
 
-    ```git clone git@github.com:meshu-dev/docker-php.git```
+    git clone git@github.com:meshu-dev/docker-php.git
 
-    ```cd docker-dev```
+    cd docker-php
 
 3. Create docker network by running the following command...
 
-    ```docker network create dev-network```
+    docker network create dev-network
 
 4. Update hosts file with helloworld localhost domain...
 
-    ```sudo vim /etc/hosts```
+    sudo vim /etc/hosts
 
-    ```127.0.0.1   helloworld.docker```
+    127.0.0.1   helloworld.docker
 
 5. Create and run containers with the following command...
 
-    ```dc up -d```
+    dc up -d
 
 6. Up open your web browser and go to http://helloworld.docker and the page should show the message "Hello World".
 
 7. Start expanding the docker dev setup by adding your own services, check below to see commands on how to use setup.
 
 ___
-
-### Setup Network
-
-Usage:
-
-```sh dev setup_network```
-
-Creates docker network, only required to be run once after setting up docker dev setup
 
 ## Docker compose commands
 
