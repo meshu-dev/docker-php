@@ -34,7 +34,7 @@ Add the following shorthand for the docker-compose command...
 4. Update hosts file with helloworld localhost domain...
 
         sudo vim /etc/hosts
-
+####
         127.0.0.1   helloworld.docker
         127.0.0.1   mysql.docker
         127.0.0.1   adminer.docker
