@@ -55,7 +55,7 @@ vim /etc/hosts
 127.0.0.1   adminer.docker
 ```
 
-*** Windows version ***
+***Windows version***
 
 If you are using Windows OS do the following...
 
