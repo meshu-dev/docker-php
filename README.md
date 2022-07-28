@@ -1,4 +1,4 @@
-# Docker Dev
+# Docker setup for PHP / MySQL Development
 
 This setup allows you to use docker and docker-compose easily for your development.
 
