@@ -11,15 +11,6 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
       - dev-network
-  helloworld:
-    build: ./services/helloworld/.
-    restart: always
-    environment:
-      VIRTUAL_HOST: helloworld.docker
-    volumes:
-      - ./services/helloworld/src:/var/www/html/helloworld/public
-    networks:
-      - dev-network
   php:
     build: ./services/php/.
     restart: always

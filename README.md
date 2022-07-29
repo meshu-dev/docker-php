@@ -43,7 +43,7 @@ cd docker-php
 docker network create dev-network
 ```
 
-4. Update hosts file with helloworld localhost domain...
+4. Update hosts file with docker container domains...
 
 ```
 vim /etc/hosts
