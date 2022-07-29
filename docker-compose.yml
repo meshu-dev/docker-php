@@ -20,6 +20,15 @@ services:
       - ./services/helloworld/src:/var/www/html/helloworld/public
     networks:
       - dev-network
+  php:
+    build: ./services/php/.
+    restart: always
+    environment:
+      VIRTUAL_HOST: php.docker
+    volumes:
+      - ./services/php/src:/var/www/html/php/public
+    networks:
+      - dev-network
   mysql:
     image: mysql:5.7
     restart: always

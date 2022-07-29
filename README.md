@@ -50,7 +50,7 @@ vim /etc/hosts
 ```
 
 ```
-127.0.0.1   helloworld.docker
+127.0.0.1   php.docker
 127.0.0.1   mysql.docker
 127.0.0.1   adminer.docker
 ```
@@ -70,7 +70,7 @@ C:\Windows\system32\drivers\etc\
 Select hosts to open, add in the below lines, save and finally close notepad.
 
 ```
-127.0.0.1   helloworld.docker
+127.0.0.1   php.docker
 127.0.0.1   mysql.docker
 127.0.0.1   adminer.docker
 ```
@@ -81,7 +81,7 @@ Select hosts to open, add in the below lines, save and finally close notepad.
 dc up -d
 ```
 
-6. Up open your web browser and go to http://helloworld.docker and the page should show the message "Hello World".
+6. Up open your web browser and go to http://php.docker and the page should show the message "Hello World".
 
 7. Start expanding the docker dev setup by adding your own services, check below to see commands on how to use setup.
 
