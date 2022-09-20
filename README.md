@@ -40,7 +40,7 @@ cd docker-php
 3. Create docker network by running the following command...
 
 ```
-docker network create dev-network
+docker network create dev
 ```
 
 4. Update hosts file with docker container domains...
@@ -50,9 +50,9 @@ vim /etc/hosts
 ```
 
 ```
-127.0.0.1   php.docker
-127.0.0.1   mysql.docker
-127.0.0.1   adminer.docker
+127.0.0.1   php.local
+127.0.0.1   mysql.local
+127.0.0.1   adminer.local
 ```
 
 ***Windows version***
@@ -70,9 +70,9 @@ C:\Windows\system32\drivers\etc\
 Select hosts to open, add in the below lines, save and finally close notepad.
 
 ```
-127.0.0.1   php.docker
-127.0.0.1   mysql.docker
-127.0.0.1   adminer.docker
+127.0.0.1   php.local
+127.0.0.1   mysql.local
+127.0.0.1   adminer.local
 ```
 
 5. Create and run containers with the following command...
