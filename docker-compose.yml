@@ -32,6 +32,7 @@ services:
     ports:
       - 3306:3306
     volumes:
+      - ./services/mysql/my.cnf:/etc/mysql/my.cnf
       - ./services/mysql/dumps:/docker-entrypoint-initdb.d
     networks:
       - dev
@@ -43,7 +44,21 @@ services:
       ADMINER_DEFAULT_SERVER: mysql
       ADMINER_DESIGN: konya
     networks:
-      - dev-network
+      - dev
+  mongodb:
+    image: mongo
+    restart: always
+    environment:
+      VIRTUAL_HOST: ${MONGO_HOST}
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+    ports:
+      - 27017:27017
+    networks:
+      - dev
+    volumes:
+      - ./services/mongodb/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./services/mongodb/mongod.conf:/etc/mongod.conf
 
 networks:
   dev:
